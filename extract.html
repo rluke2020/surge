@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
+    <meta
+      http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <link rel="stylesheet" href="assets/main.css" />
+    <title>Surge Call Calculator</title>
+  </head>
+
+<body>
+	<span id="loading">  </span>
+		<h1>Surge Call Manipulator</h1>
+		<h7> </h7>
+
+    <div class="topnav" id="myTopnav">
+		  <a href="index.html" class="active">Home</a>
+		  <a href="#about"class="false">About</a>
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		</div>
+			<i class="fa fa-bars"></i>
+		  </a>
+		</div>	<div class="container">
+        <div class="container-left">
+          <!-- <label for="select-directory">select file</label> -->
+          <div id="grp-select-file">
+              <label for="select-directory" id="selected-file">Select a file</label>
+              <button id="select-directory" name="select-directory">
+                  Select-file
+              </button>
+              <br />
+        </div>
+              <br />
+      <div id="grp-sheet">
+        <label for="select">select sheet to extract</label>
+        <select name="select" id="select">
+            <option value="0">nothing</option>
+        </select>
+      </div>
+
+      <div id="grp-rename">
+       <textarea type="text" name="rename" id="rename" cols="30" rows="3"  > </textarea>  
+         <label for="rename">rename(optional)</label>
+     
+
+      </div>
+    
+      <div id="grp-destination">
+      <button id="destination_btn">select destination folder</button>
+          
+
+          <span id="destination"></span>
+      </div>
+   
+ 
+      <div id="grp-extract">
+         <button id="extract">Extract</button>
+
+      </div>
+      
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script type="module" src="./renderer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="assets/main.css" />
+    <title>Surge Call Calculator</title>
+  </head>
+  <body>
+  <span id="loading">  </span>
+		<h1>Surge Call Manipulator</h1>
+		<h7> </h7>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<div class="topnav" id="myTopnav">
+		  <a href="index.html" class="fasle">Home</a>
+		  <a href="#about"class="">About</a>
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		</div>
+			<i class="fa fa-bars"></i>
+		  </a>
+		</div>
+    <span id="loading">  </span>
+    <h1>Agregate Surge Call Sheet</h1>
+	<h4>Select all the sheets to add</h4>
+	<div class="container">
+    <div class="container-left">
+      <!-- <label for="select-directory">select file</label> -->
+      <div id="grp-select-file">
+          <label for="select-files-directory" id="selected-files-directory">Select the WorkBooks Folder</label>
+          <button id="select-files-directory" name="select-files-directory">
+              Select-Folder
+          </button>
+          <br />
+    </div>
+          <br />
+  <div id="grp-sheet">
+    <label for="select">Select sheet </label>
+    <select name="select" id="select" disabled>
+            
+      <option value="Active Index Testing ">Active Index Testing </option><option value="OPD Screening">OPD Screening</option><option value="Missed Appointments ">Missed Appointments </option><option value="Defaulter Q1">Defaulter Q1</option><option value="Bi-weekly &amp; surge call dates ">Bi-weekly &amp; surge call dates </option><option value="Reference">Reference</option></select>
+  </div>
+
+      <div id="grp-rename">
+            <textarea type="text" name="rename" id="rename" cols="30" rows="3">week.xlsx</textarea>  
+              <label for="rename">rename(optional)</label>
+          
+
+      </div>
+
+  <div id="grp-destination">
+  <button id="destination_btn">Select destination folder</button>
+      
+
+      <span id="destination"></span>
+  </div>
+
+
+  <div id="grp-consolidate">
+     <button id="consolidate" disabled >Consolidate</button>
+
+  </div>
+  
+</div>
+    <div class="container-right">
+      <div id="grp-fields">
+        <a href="#" id="options">More options...</a>
+        <br>
+             <!-- row and collumn configuration -->
+      
+ 
+     
+      <div id="grp-dates">
+        
+     <label for="Active Index Testing ">Active Index Testing </label> 
+     <br>
+     <input type="date" name="Active Index Testing "  />
+
+     
+      <br />
+      <label for="OPD Screening">OPD Screening</label>
+      <br>
+      <input type="date" name="OPD Screening" >
+
+      <br />
+      
+      <label for="Missed Appointments ">Missed Appointments </label>
+      <br>
+      <input type="date" name="Missed Appointments ">
+
+      <br />
+      <label for="Defaulter Q1">Defaulter Q1</label>
+      <br>
+      <input type="date" name="Defaulter Q1">
+
+      <br />
+     
+      </div>
+
+    </div>
+</div>
+   
+
+    <!-- You can also require other files to run in this process -->
+    <script type="module" src="./renderer.js"></script>
+  </body>
+</html>
